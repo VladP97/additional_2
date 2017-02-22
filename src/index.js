@@ -12,7 +12,7 @@ joinToArr = function(array,newArr) {
         if (array[i] instanceof Array == true) {
             array[i] = arguments.callee(array[i],newArr);
         } else {
-            newArr[i] = array[i];
+            newArr.push(array[i]);
         }
     }
     return newArr;
